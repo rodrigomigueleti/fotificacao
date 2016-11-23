@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="btn_loadf">Carregar...</string>
+    <string name="txt_dialgo_openfile">Abrir arquivo de foto</string>
+    <string name="btn_escolher">Selecionar</string>
+    <string name="btn_cancelar">Cancelar</string>
+</resources>
