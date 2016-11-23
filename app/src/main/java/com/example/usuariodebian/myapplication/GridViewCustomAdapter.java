@@ -1,10 +1,12 @@
 package com.example.usuariodebian.myapplication;
 
 import android.app.Activity;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -33,7 +35,11 @@ public class GridViewCustomAdapter extends Activity {
         gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                
+                ImageView iv = (ImageView)((MetaFotosAdapter.ViewHolder)view.getTag()).image;
+                Bitmap imagem = ((BitmapDrawable)iv.getDrawable()).getBitmap();
+                DialogoOpenFile dialogo = new DialogoOpenFile();
+                dialogo.setBitmap(imagem);
+                dialogo.show(getFragmentManager(), "Abrir foto");
             }
         });
 

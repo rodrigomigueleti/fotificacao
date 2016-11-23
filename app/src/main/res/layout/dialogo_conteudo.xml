@@ -4,11 +4,14 @@
     android:id="@+id/conteudo_dialogo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.usuariodebian.myapplication.MainActivity">
+    tools:context="com.example.usuariodebian.myapplication.GridViewCustomAdapter">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/txt_dialgo_openfile"/>
+        <ImageView android:id="@+id/imagemItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 </RelativeLayout>
